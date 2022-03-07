@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            height: 500px;
+            justify-content: center;
+            align-items:  center;
+            background-color: red;
+        }
+        .item{
+            width: 50px;
+            height: 25px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            
+        </div>
+    </div>
+    <!-- <button id="randomizer"> Randomize Container</button> -->
+    <script>
+        function $(selector){
+            return document.querySelector(selector);
+        }
+
+        function setPerimeter(selector, width, height){
+            console.log(document.querySelector(selector))
+            document.querySelector(selector).width = width;
+            document.querySelector(selector).height = height
+        }
+        
+        $("#randomizer").addEventListener("click", function(e){
+            var height = Math.random() * 1000*
+            setPerimeter(".container",height * 2, height)
+        })
+    </script>
+</body>
+</html>
